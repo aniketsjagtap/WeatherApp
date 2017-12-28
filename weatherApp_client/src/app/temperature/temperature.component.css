@@ -1,0 +1,10 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.weatherTab{
+    align-content: center;
+    text-align: center;
+    color: crimson;
+}
+table, th, td {
+    border: 1px solid black;
+ }

@@ -1,0 +1,45 @@
+
+<div class="weatherTab">
+    
+  
+ <label>City Name* : </label> 
+  <select [(ngModel)]="selectedValue"(ngModelChange)="clearTab()" class="form-control" ngModel required #profile="ngModel">
+    <option *ngFor = "let opt of cities" [ngValue]="opt">{{opt.name}}</option>
+  </select>
+  <p *ngIf="profile.invalid"> 
+      City field can  not be blank. 
+   </p> 
+  
+  <!-- <input [(ngModel)] = "city" placeholder = "city" type="text" >-->
+  <br>
+   <button class="btn btn-success" (click)="getCityWeather(selectedValue)">Get Tempureture</button>
+  
+   <hr>
+   <!--weather : {{weather | json}}-->
+ <!-- <ul *ngFor="let temp of weather">
+    <li>{{temp.Temperature.Metric.Value}} {{temp.Temperature.Metric.Unit}}</li>
+    <li>{{temp.Temperature.Imperial.Value}} {{temp.Temperature.Imperial.Unit}}</li>
+    <li>{{temp.MobileLink}}</li>
+  </ul>-->
+</div>
+<div class = "weatherTab" *ngIf = "selectedValue">
+  <table align="center" >
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Temperature</td>
+        <td>Temperature</td>
+        <td>More Details</td>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let temp of weather" >
+        <td>{{selectedValue.name}}</td>
+        <td>{{temp.Temperature.Metric.Value}} {{temp.Temperature.Metric.Unit}}</td>
+        <td>{{temp.Temperature.Imperial.Value}} {{temp.Temperature.Imperial.Unit}}</td>
+        <td><a href="{{temp.MobileLink}}" target="_blank">{{temp.MobileLink}}</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- 204842 -->
+</div>

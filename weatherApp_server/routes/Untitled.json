@@ -1,0 +1,21 @@
+[{
+	"LocalObservationDateTime": "2017-12-27T17:05:00+05:30",
+	"EpochTime": 1514374500,
+	"WeatherText": "Overcast",
+	"WeatherIcon": 8,
+	"IsDayTime": true,
+	"Temperature": {
+		"Metric": {
+			"Value": 28.9,
+			"Unit": "C",
+			"UnitType": 17
+		},
+		"Imperial": {
+			"Value": 84,
+			"Unit": "F",
+			"UnitType": 18
+		}
+	},
+	"MobileLink": "http://m.accuweather.com/en/in/mumbai/204842/current-weather/204842?lang=en-us",
+	"Link": "http://www.accuweather.com/en/in/mumbai/204842/current-weather/204842?lang=en-us"
+}]
